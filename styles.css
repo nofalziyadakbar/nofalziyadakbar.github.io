@@ -1,12 +1,194 @@
-*{
+/*mobile first*/
+
+body{
+	font-family: 'Segoe UI';
+	margin: 0;
+}
+
+header{
+	position: fixed;
+	top: 0; left: 0;
+	width: 100%;
+	z-index: 1000;
+}
+
+header::before{
+	content: '';
+	position: absolute;
+	top: 0; left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255, 255, 255, .5);
+	backdrop-filter: blur(5px);
+}
+
+nav{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.logo{
+	display: flex;
+	align-items: center;
+	z-index: 1000;
+}
+
+.logo img{
+	height: 24px;
+}
+
+.logo img:hover{
+	opacity: 80%;
+}
+
+/*menu icon*/
+
+.menu{
+	display: block;
+	width: 32px;
+	height: 48px;
+	position: relative;
+	cursor: pointer;
+}
+
+.menu-box{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#menu{
+	display:none;
+}
+
+.line{
+	position: absolute;
+	height: 4px;
+	width: 100%;
+	background: #000;
+	border-radius: 6px;
+	transition: .3s ease;
+	margin: 8px 0;
+}
+
+.line:nth-child(1){top: 8px;}
+.line:nth-child(2){top: 16px;}
+.line:nth-child(3){top: 24px;}
+
+#menu:checked + .menu .line:nth-child(1){
+	transform: translateY(8px) rotate(-45deg);
+}
+
+#menu:checked + .menu .line:nth-child(2){
+	opacity:0;
+}
+
+#menu:checked + .menu .line:nth-child(3){
+	transform: translateY(-8px) rotate(45deg);
+}
+
+.pages{
+	position: absolute;
+	top: 100%; left: 0;
+	width: 100%;
+	background-color: rgba(255, 255, 255, .5);
+	backdrop-filter: blur(5px);
+	list-style-type: none;
+	margin: 0;
+	padding: 8px 0;
+	overflow: hidden;
+	text-align: center;
+	opacity: 0;
+	transition: .3s ease;
+}
+
+.pages li{
+	display: flex;
 	text-align: center;
 }
 
-h1{
-	font-family: Segoe UI;
+.pages li a{
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #000;
+	width: 100%;
+	padding: 8px 0;
+	margin: 8px 0;
 }
 
-p{
-	font-family: arial;
+.pages li a:hover{
+	text-decoration: underline;
+	text-underline-offset: 8px;
+
+}
+
+#menu:checked~.pages{
+	opacity: 100%;
+}
+
+main{
+	margin-top: 48px;
+}
+
+.container-fluid{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0 2px 3px rgba(0, 0, 0, .2);
+}
+
+.face{
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 90%;
+	height: 244px;
+}
+
+.col-3{
+	width: 190px;
+}
+
+.col-3 h1{
 	font-size: 2em;
+	line-height: 1em;
+	margin: 0px;
+}
+
+.col-3 p{
+	font-size: .75em;
+	margin: 0px;
+	color: #AAA;
+}
+
+.col-2{
+	position: absolute;
+	right: 0; bottom: 0;
+}
+
+.col-2 img{
+	height: 244px;
+}
+
+.project{
+	width: 90%;
+	text-align: center;
+}
+
+.col-4 h1{
+	text-transform: uppercase;
+	font-size: 1em;
+	margin: 24px 0 24px;
+	color: #AAA;
+}
+
+footer{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #EEE;
 }
