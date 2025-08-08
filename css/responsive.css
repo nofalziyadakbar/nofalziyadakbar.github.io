@@ -1,0 +1,469 @@
+@media only screen and (max-width: 1140px){
+	#main content{
+		margin: auto;
+		width: 90%;
+	}
+
+	#contact{
+		width: 90%;
+	}
+}
+
+@media only screen and (max-width: 980px){
+	#itsme{
+		height: 400px;
+	}
+
+	.title{
+		width: 360px;
+	}
+
+	.title h1{
+		font-size: 4em;
+	}
+
+	.title p{
+		font-size: 1.5em;
+	}
+
+	.face{
+		position: relative;
+		width: 400px;
+	}
+}
+
+@media only screen and (max-width: 910px){
+
+	#itsme{
+		width: 80%;
+		height: auto;
+	}
+
+	.title h1{
+		font-size: 3em;
+	}
+
+	.title p{
+		font-size: 1em;
+	}
+
+	.face{
+		position: relative;
+		width: 300px;
+	}
+
+	nav{
+		height: 90px;
+	}
+
+	#icon-res{
+		display: block;
+	}
+
+	#icon-res #icon-close{
+		display: none
+	}
+
+	#check:checked~#icon-res #icon-menu{
+		display: none;
+	}
+
+	#check:checked~#icon-res #icon-close{
+		display: block;
+	}
+
+	#menu{
+		position: absolute;
+		top: 100%;
+		left: 0;
+		right: 0;
+		width: 100%;
+		height: 0;
+		display: block;
+		background-color: red;
+		background-color: rgba(255, 255, 255, .5);
+		backdrop-filter: blur(20px);
+		overflow: hidden;
+		transition: .8s ease;
+	}
+
+	#check:checked~#menu{
+		height: 400px;
+	}
+
+	#menu>li{
+		margin: 32px 0;
+		display: block;
+		text-align: center;
+	}
+
+	#menu>li>a{
+		display: inline-block;
+		width: 100%;
+		height: 0;
+		transition: 1s ease;
+	}
+
+	#check:checked~#menu>li>a{
+		height: 45px;
+	}
+
+	#icon{
+		margin: 0 64px;
+	}
+
+	#icon>li{
+		margin: auto;
+	}
+
+	.contact h1{
+		font-size: 4em;
+		line-height: 1em;
+	}
+
+	.contact p{
+		margin: 0;
+		margin-top: 8px;
+		font-size: 1.2em;
+		color: #555;
+	}
+
+	#contact-icon li{
+		margin: 16px 0;
+	}
+
+	.textic{
+		font-size: 1.2em;
+		margin-right: 16px;
+	}
+}
+
+@media only screen and (max-width: 768px){
+
+	#itsme{
+		width: 80%;
+		height: auto;
+	}
+
+	.title{
+		width: 340px;
+	}
+
+	.title h1{
+		font-size: 2.5em;
+	}
+
+	.title p{
+		font-size: 1em;
+	}
+
+	#expe{
+		width: 90%;
+	}
+
+	.expe h1{
+		font-size: 3em;
+	}
+
+	.expe p{
+		font-size: 1.2em;
+	}
+
+	#port{
+		width: 90%;
+	}
+
+	.port h1{
+		font-size: 3em;
+	}
+
+	.port p{
+		font-size: 1.2em;
+	}
+
+	.half-face{
+		width: 280px;
+	}
+
+	.face{
+		position: relative;
+		width: 250px;
+	}
+
+	nav{
+		height: 90px;
+	}
+
+	#contact{
+		display: block;
+	}
+
+	.contact{
+		width: auto;
+		height: auto;
+		margin: 32px auto;
+	}
+
+	#contact-icon{
+		margin: 16px auto;
+		width: auto;
+	}
+	.expe-logo{
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 500px){
+	.contact h1{
+		font-size: 3em;
+	}
+
+	.contact p{
+		margin-top: 8px;
+	}
+
+	#contact-icon li{
+		margin: 16px 0;
+		display: flex;
+		align-items: center;
+		justify-content: end;
+	}
+
+	.textic{
+		font-size: 1em;
+		margin-right: 16px;
+	}
+}
+
+@media only screen and (max-width: 620px){
+	.title h1{
+		font-size: 2.2em;
+	}
+
+	.title p{
+		font-size: 1em;
+	}
+
+	.face{
+		width: 200px;
+	}
+
+	.download{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: auto;
+		margin: auto;
+	}
+
+	.port h1{
+		font-size: 2.5em;
+	}
+
+	.port p{
+		font-size: 1em;
+	}
+
+	.half-face{
+		width: 200px;
+	}
+}
+
+@media only screen and (max-width: 475px){
+	.title h1{
+		font-size: 2.5em;
+	}
+
+	.title{
+		width: 360px;
+	}
+
+	.title p{
+		font-size: .8em;
+	}
+
+	main{
+		top: 80px;
+	}
+
+	nav{
+		margin: 0;
+		width: 90%;
+		height: 80px;
+	}
+
+	footer{
+		top: 80px;
+	}
+
+	.kelter{
+		display: block;
+	}
+
+	.kt{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 64px;
+		font-size: 1em;
+		color: #000;
+		margin: 0 16px;
+	}
+}
+
+@media only screen and (max-width: 425px){
+	.title h1{
+		font-size: 2em;
+	}
+
+	.title{
+		margin: 32px auto;
+		width: 300px;
+	}
+
+	.title p{
+		margin-top: 8px;
+		font-size: .8em;
+	}
+
+	main{
+		top: 60px;
+	}
+
+	footer{
+		top: 60px;
+	}
+
+	nav{
+		margin: 0;
+		width: 90%;
+		height: 60px;
+	}
+
+	.logo svg{
+		height: 40px;
+	}
+
+	#icon-menu, #icon-close{
+		height: 24px;
+	}
+
+	.faces{
+		display: none;
+	}
+
+	#other p{
+		font-size: 1.2em;
+	}
+
+	.credit{
+		font-size: 1em;
+	}
+
+	.port{
+		margin: 32px 0;
+	}
+}
+
+@media only screen and (max-width: 375px){
+	.title{
+		margin: 32px auto;
+		width: 300px;
+	}
+
+	.title p{
+		margin-top: 8px;
+		font-size: .8em;
+	}
+
+	nav{
+		margin: 0;
+		width: 90%;
+		height: 60px;
+	}
+
+	.face{
+		width: 200px;
+	}
+
+	.logo svg{
+		height: 40px;
+	}
+
+	#icon-menu, #icon-close{
+		height: 24px;
+	}
+
+	.boxpt{
+		height: 250px;
+		width: 280px;
+	}
+
+	.content_pt{
+		width: 260px;
+		height: 230px;
+	}
+
+	.image-pt{
+		overflow: hidden;
+		height: 150px;
+	}
+
+	.image-pt img{
+		width: 280px;
+	}
+
+	#about h1{
+		margin: 16px 0;
+		font-size: 1em;
+	}
+
+	#skill h1{
+		margin: 16px 0;
+		font-size: 1em;
+	}
+
+	#other h1{
+		margin: 16px 0;
+	}
+
+	#other p{
+		font-size: 1em;
+	}
+
+	.contact h1{
+		font-size: 2.5em;
+	}
+
+	.contact p{
+		font-size: 1em;
+	}
+
+	#contact-icon li{
+		margin: 8px 0;
+	}
+
+	.textic{
+		font-size: .8em;
+		margin-right: 16px;
+	}
+
+	#contact-icon li img{
+		width: 48px;
+	}
+
+	#other h1{
+		font-size: 1em;
+	}
+}
+
+@media only screen and (max-width: 320px){
+
+	.title{
+		width: auto;
+	}
+
+	.face{
+		display: none;
+	}
+}
