@@ -94,20 +94,24 @@ nav{
 	position: absolute;
 	top: 100%; left: 0;
 	width: 100%;
+	height: 0;
 	background-color: rgba(255, 255, 255, .5);
 	backdrop-filter: blur(5px);
 	list-style-type: none;
 	margin: 0;
-	padding: 8px 0;
+	padding: 0;
 	overflow: hidden;
 	text-align: center;
-	opacity: 0;
-	transition: .3s ease;
+	transition: 1s ease;
+	display: block;
+	align-content: center;
 }
 
 .pages li{
 	display: flex;
 	text-align: center;
+	opacity: 0;
+	transition: .5s ease;
 }
 
 .pages li a{
@@ -115,18 +119,27 @@ nav{
 	text-decoration: none;
 	color: #000;
 	width: 100%;
-	padding: 8px 0;
-	margin: 8px 0;
+	padding: 0;
+	margin: 0;
+	transition: .5s ease;
 }
 
 .pages li a:hover{
 	text-decoration: underline;
 	text-underline-offset: 8px;
-
 }
 
 #menu:checked~.pages{
+	height: 300px;
+}
+
+#menu:checked~.pages li{
 	opacity: 100%;
+}
+
+#menu:checked~.pages li>a{
+	padding: 8px 0;
+	margin: 8px 0;
 }
 
 main{
@@ -140,7 +153,7 @@ main{
 	box-shadow: 0 2px 3px rgba(0, 0, 0, .2);
 }
 
-.face{
+.container{
 	position: relative;
 	display: flex;
 	align-items: center;
@@ -149,29 +162,34 @@ main{
 	height: 244px;
 }
 
-.col-3{
+.title{
 	width: 190px;
 }
 
-.col-3 h1{
+.title h1{
 	font-size: 2em;
 	line-height: 1em;
 	margin: 0px;
 }
 
-.col-3 p{
+.title p{
 	font-size: .75em;
 	margin: 0px;
 	color: #AAA;
 }
 
-.col-2{
+.face{
 	position: absolute;
 	right: 0; bottom: 0;
+	height: 244px;
 }
 
-.col-2 img{
+.face .half{
 	height: 244px;
+}
+
+.face .full{
+	display: none;
 }
 
 .project{
@@ -191,4 +209,136 @@ footer{
 	align-items: center;
 	justify-content: center;
 	background-color: #EEE;
+}
+
+@media only screen and (min-width: 425px){
+
+	.title{
+		width: 210px;
+	}
+
+	.face{
+		position: absolute;
+		right: 0; bottom: 0;
+		height: 244px;
+	}
+
+	.face .half{
+		display: none;
+	}
+
+	.face .full{
+		display: block;
+		height: 244px;
+	}
+}
+
+@media only screen and (min-width: 600px){
+
+	.container{
+		height: 280px;
+	}
+
+	.face{
+		position: relative;
+		height: 280px;
+	}
+
+	.face .full{
+		height: 280px;
+	}
+
+	.title{
+		width: 280px;
+	}
+
+	.title h1{
+		font-size: 2.5em;
+		line-height: 1em;
+		margin: 0px;
+	}
+
+	.title p{
+		font-size: 1.2em;
+		margin: 0px;
+		color: #AAA;
+	}
+
+	.logo img{
+		height: 32px;
+	}
+}
+
+@media only screen and (min-width: 768px){
+
+	.container{
+		height: 400px;
+	}
+
+	.face{
+		position: absolute;
+		right: 0; bottom: 0;
+		height: 400px;
+	}
+
+	.face .full{
+		height: 400px;
+	}
+
+	.title{
+		width: 320px;
+	}
+
+	.title h1{
+		font-size: 2.5em;
+	}
+
+	.title p{
+		font-size: 1.5em;
+	}
+}
+
+@media only screen and (min-width: 1024px){
+
+	.title{
+		width: 400px;
+	}
+
+	.title h1{
+		font-size: 4em;
+	}
+
+	.title p{
+		font-size: 1.5em;
+	}
+}
+
+@media only screen and (min-width: 1025px){
+
+	.container{
+		height: 600px;
+	}
+
+	.face{
+		height: 600px;
+	}
+
+	.face .full{
+		height: 600px;
+	}
+
+	.title{
+		width: 400px;
+	}
+}
+
+@media only screen and (min-width: 1152px){
+
+	.container{
+		max-width: 1040px;
+	}
+
+	nav{
+		max-width: 1040px;
+	}
 }
